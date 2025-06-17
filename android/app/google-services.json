@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712594885771",
+    "project_id": "scamradar-a2e11",
+    "storage_bucket": "scamradar-a2e11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712594885771:android:1fa34b6665e8f42454588e",
+        "android_client_info": {
+          "package_name": "com.example.scamradar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDckAgJIP_epAOCrWXlijjRFiFhIIhXYNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
