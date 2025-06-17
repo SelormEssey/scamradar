@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'screens/report_form.dart';
 import 'services/firebase_service.dart';
+import 'screens/search_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
       title: 'ScamRadar',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: HomeScreen(),
+      routes: {
+        '/search': (_) => SearchScreen(),
+      },
     );
   }
 }
@@ -50,9 +54,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('ScamRadar')),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () => openReportForm(context),
-          child: Text('Report a Scam'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () => openReportForm(context),
+              child: Text('Report a Scam'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/search'),
+              child: Text('Search a Scammer'),
+            ),
+          ],
         ),
       ),
     );
